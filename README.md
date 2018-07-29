@@ -9,7 +9,7 @@ In order to obtain a certificate from this course seven assignments of a differe
 
 The Assignments are:
 1. [Authenticated bindshell](AuthBindShell.md)
-2. [Authenticated revserse shell](AuthReverseShell.md)
+2. [Authenticated reverse shell](AuthReverseShell.md)
 3. [Egghunter](EggHunter.md)
 4. [Custom encoder](Encoder.md)
 5. [Analyse shellcode](Analyse.md)
