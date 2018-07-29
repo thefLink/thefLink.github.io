@@ -16,7 +16,7 @@ socket(AF_INET, SOCK_STREAM, 0)
 And is achieved by:
 ```
     xor rax, rax
-    cdq
+    cdq ; clear rdx
     push SYS_SOCKET
     pop rax ; RAX contains the socket() syscall
     push AF_INET
@@ -79,7 +79,7 @@ Nothing surprising here, note that I rely on bind() returning 0 :-)
 ## Accept:
 C pseudocode:
 ```
-    ; accept(sockfd, struct sockaddr *addr, 16)
+    ; accept(sockfd, struct sockaddr *addr, socklen_t *addrlen)
 ```
 Assembly:
 ```
