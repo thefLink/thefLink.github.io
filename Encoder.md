@@ -56,6 +56,7 @@ _loop: ; loop over the encoded shellcode and undo the encoding
     cmp rcx, LEN
     jg EncodedShellcode ; if this branch is taken the decoding is done and the shellcode can be executed
 
+    ; decode the respective byte and save the result
     mov al, [rdi]
     xor al, sil
     mov sil, [rdi]
