@@ -16,7 +16,7 @@ _huntloop:
     cmp dword [rsp], the_egg ; Does Rsp point to the egg?
     jne _huntloop ; If it does not point to the egg do an other iteration
 
-    ; We found the gg \0/
+    ; We found the egg \0/
     add rsp, 4 ; Jump over the 4 byte egg
     jmp rsp ; Jump to the shellcode
 ```
@@ -56,7 +56,7 @@ As you can see I placed some trash values between the egghunter and the actuall 
 +-----------------------+
 ```
 
-By incrementing the RSP we let point closer and closer to the egg until it points to it.
+By incrementing the RSP we let it point closer and closer to the egg until it points to it.
 Then I add the egg size ( 4 bytes ) to the rsp so that the rsp points to the shellcode.
 
 This blog post has been created for completing the requirements of the SecurityTube Linux Assembly Expert certification.
