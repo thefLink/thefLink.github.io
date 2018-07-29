@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+## SLAE64
 
-You can use the [editor on GitHub](https://github.com/thefLink/thefLink.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+As a preparation for the OSCE course I decided to take the SecurityTube Linux Assembly64 Expert (SLAE64) class to get a good understanding of assembly and shellcoding in particular.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The course is completly self-paced, meaning that there is no schedule or limited lab time as you might know it from OSCP.
+In my opinion the class is extremly helpfull and teaches valuable lessons and tricks to write short and reliable shellcode, thank you for this course. 
 
-### Markdown
+In order to obtain a certificate from this course seven assignments of a different level of difficulty must be done and I present my solutions here on this blog.   
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The Assignments are:
+1. [Authenticated bindshell](AuthBindShell.md)
+2. [Authenticated revserse shell](AuthReverseShell.md)
+3. [Egghunter](EggHunter.md)
+4. [Custom encoder](Encoder.md)
+5. [Analyse shellcode](Analyse.md)
+6. [Polymorphic shellcode](Polymorphic.md)
+7. [Custom encrypter](Encrypter.md)
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+This blog post has been created for completing the requirements of the SecurityTube Linux Assembly Expert certification.
 
-- Bulleted
-- List
+http://securitytube-training.com/online-courses/securitytube-linux-assembly-expert
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/thefLink/thefLink.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Student ID: SLAE64-1581
