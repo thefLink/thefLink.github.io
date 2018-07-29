@@ -16,6 +16,9 @@ The Assignments are:
 6. [Polymorphic shellcode](Polymorphic.md)
 7. [Custom encrypter](Encrypter.md)
 
+The complete shellcode can be found on my github account:
+
+https://github.com/thefLink/SLAE64
 
 This blog post has been created for completing the requirements of the SecurityTube Linux Assembly Expert certification.
 
