@@ -2,7 +2,7 @@
 
 This assignment was about creating an Egghunter shellcode.
 
-An Egghunter shellcode is used in situations in which you are not sure where exactly your shellcode was placed. The idea is that the egghunter scans the memory for the occurence of a specific value ( the egg ) and jumps to the shellcode that is placed behind the egg.
+An Egghunter shellcode is used in situations in which you are not sure where exactly your shellcode was placed. However you managed to redirect the IP to a smaller shellcode which contains the egghunter shellcode. The idea is that the egghunter scans the memory for the occurence of a specific value ( the egg ) and jumps to the shellcode that is placed behind the egg.
 
 ## Shellcode
 
