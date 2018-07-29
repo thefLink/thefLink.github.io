@@ -44,7 +44,7 @@ The entire implementation is done in C. Here I will present you its most relevan
 ```
 arc4random_buf(xor_key, sizeof xor_key);
 ```
-I make use of the arc4random_buf function that original comes from the BSD world. It is known to generate true _random_ bytes and places them into a buffer. I really like how easily this function can be used.
+I make use of the arc4random_buf function that originaly comes from the BSD world. It is known to generate true _random_ bytes and places them into a buffer. I really like how easily this function can be used.
 ### Encrypt
 ```
    for ( int i = 0; i < len_payload; ++i )
