@@ -28,13 +28,13 @@ xor rax, rax
 mov rsi, rax ; null out rsi
 cdq ; null out rdx
 inc al
-inc al
+inc al ; al equals 2 (SYS_OPEN)
 jmp _push_filename
 
 _readfile:
 ; syscall open file
 pop rdi ; pop path value
-xor byte [rdi + 11], 0x42
+xor byte [rdi + 11], 0x42 ; the last char of the path is 0x42. Xoring it with 0x42 will create a nullbyte to mark its end.
 syscall
 
 ; syscall read file
